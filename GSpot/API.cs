@@ -17,7 +17,7 @@ namespace GSpot
             return p.IsInRole(WindowsBuiltInRole.Administrator);
         }
 
-        public void RestartElevated()
+        public static void RestartElevated()
         {
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.UseShellExecute = true;
@@ -38,7 +38,7 @@ namespace GSpot
         }
 
 
-        private void Hotspot(string ssid, string key, bool status)
+        public static void Hotspot(string ssid, string key, bool status)
         {
             ProcessStartInfo processStartInfo = new ProcessStartInfo("cmd.exe");
             processStartInfo.RedirectStandardInput = true;

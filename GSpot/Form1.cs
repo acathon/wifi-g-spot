@@ -25,6 +25,15 @@ namespace GSpot
 
         }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello", "error");
+            String ssid;
+            String pwd;
+            ssid = textBox1.Text;
+            pwd = textBox2.Text;
+            bool stat = false;
+            API.Hotspot(ssid, pwd, stat);
+        }
     }
 }
